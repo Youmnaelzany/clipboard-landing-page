@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  min-height: 100svh;
+  max-width: 90rem;
+}
+
+img,
+picture,
+svg,
+video {
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* 75ch not higher than that */
+p {
+  max-width: 75ch;
+  text-wrap: pretty;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+
+.hero-wrapper {
+  background: url(/public/images/bg-header-desktop.png) no-repeat;
+  background-size: cover;
+}
+
+.hero__btn1 {
+  box-shadow: 0px 10px 20px 0px rgba(137, 229, 199, 0.5),
+    0px -3px 0px 0px rgba(0, 0, 0, 0.15) inset;
+  cursor: pointer;
+}
+.hero__btn2 {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1),
+    0px -3px 0px 0px rgba(0, 0, 0, 0.15) inset;
+  cursor: pointer;
+}
+
+footer {
+  background-color: rgba(158, 171, 178, 0.1002);
+}
+
+@media (max-width: 375px) {
+  .hero-wrapper {
+    background: url(/public/images/bg-header-mobile.png) no-repeat;
+    background-size: cover;
+  }
+}
